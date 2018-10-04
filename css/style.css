@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+body {
+  max-width: 100%;
+  overflow: auto;
+}
+
   /* Navbar */
   .navbar {
     /*display: flex;*/
@@ -13,19 +18,17 @@
 
   /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
   .row.content {
-    /*height: 450px;*/
+    height: 450px;
     display: flex;
-    flex-wrap: wrap;
-    max-width: 100%;
   }
 
   /* Set background color and 100% height */
   .sidenav {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 20px;
+    padding-right: 20px;
     background-color: #ccc;
-    height: 100%;
+    max-height: 100%;
     align-items: center;
   }
 
@@ -48,21 +51,22 @@
     background-color: #4c4c4c;
     color: #fff;
     padding: 15px;
-    bottom: 0;
-    left: 0;
-    /*position: fixed;*/
+    /*bottom: 0;
+    left: 0;*/
+    position: relative;
+    display: block;
     width: 100%;
   }
 
   /* On small screens */
   @media screen and (max-width: 680px) {
     .sidenav {
-      /*height: auto;
-      padding: 15px;*/
+      height: auto;
+      /*padding: 15px;*/
       width: 100%;
     }
     .row.content {
-      /*height:auto;*/
+      height:auto;
       display: flex;
       flex-direction: column;
   }
@@ -71,13 +75,14 @@
   /* On tablet view */
   @media screen and (min-width: 681px) and (max-width: 1024px) {
     .sidenav {
-      /*height: auto;
-      padding: 15px;*/
+      height: auto;
+      padding: 15px;
       width: 100%;
     }
     .row.content {
-      display: flex;
+      /*display: flex;*/
       flex-direction: row;
-    /*height:auto;*/
+      height: auto;
+      width: 100%;
   }
   }
